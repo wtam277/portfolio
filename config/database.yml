@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: password
+  host: db
+
+development:
+  <<: *default
+  database: runteq_mid_term_examination_rails_template_development
+
+test:
+  <<: *default
+  database: runteq_mid_term_examination_rails_template_test
+
+production:
+  <<: *default
+  database: runteq_mid_term_examination_rails_template_production
+  username: runteq_mid_term_examination_rails_template
+  password: <%= ENV['RUNTEQ_MID_TERM_EXAMINATION_RAILS_TEMPLATE_DATABASE_PASSWORD'] %>
