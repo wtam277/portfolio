@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tags
   root 'posts#index'
   get 'sessions/new'
   get :sign_up, to: 'users#new'
