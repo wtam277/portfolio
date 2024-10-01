@@ -12,7 +12,7 @@
         <%= f.search_field :body_cont, id: 'search_field_of_comment', class: 'form-control', placeholder: 'コメント', value: params.dig(:q, :body_cont) %>
         <%= f.search_field :user_profile_name_cont, id: 'search_field_of_user', class: 'form-control', placeholder: 'ユーザー', value: params.dig(:q, :user_profile_name_cont) %>
         <br>
-        <%= f.submit '検索' %>
+        <%= f.submit 'Search', class: 'btn btn-primary' %>
       <% end %>
       <% end %>
       </form>
