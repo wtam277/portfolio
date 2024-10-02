@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem "matrix", "~> 0.4.2"
 
 gem "jsbundling-rails", "~> 1.1"
+
+gem 'ransack', '3.2.1'

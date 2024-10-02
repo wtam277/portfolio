@@ -10,4 +10,5 @@ class User < ApplicationRecord
   def mine?(object)
     id == object.user_id
   end
+  
 end

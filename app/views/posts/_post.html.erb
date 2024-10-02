@@ -2,6 +2,16 @@
   <div>
     <div><%= link_to post.title, post_path(post) %></div>
     posted by <%= post.user.name %>
+    <div>
+      <% post.tags.each do |tag| %>
+        <%= search_form_for @q, url: posts_path do |f| %> 
+        <%= hidden_field_tag 'q[tags_name_eq]', tag.name %>
+        <%= link_to tag.name, 'javascript:void(0)', 
+        class: "badge rounded-pill bg-primary text-decoration-none text-white", 
+        onclick: 'this.closest("form").submit();' %>
+       <% end %>
+      <% end %>
+    </div>
   </div>
   <div class="d-flex">
     <div class="ms-auto">
